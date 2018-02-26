@@ -18,7 +18,7 @@ rules:
   guard-for-in: 0
   indent: [2, 2]
   keyword-spacing: [2, { before: true, after: true }]
-  linebreak-style: [2, unix]
+  // linebreak-style: [2, unix]
   no-caller: 2
   no-console: 0
   no-empty: 0

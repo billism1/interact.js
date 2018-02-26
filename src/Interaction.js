@@ -2,7 +2,6 @@ const scope      = require('./scope');
 const utils      = require('./utils');
 const events     = require('./utils/events');
 const browser    = require('./utils/browser');
-const domObjects = require('./utils/domObjects');
 const finder     = require('./utils/interactionFinder');
 const signals    = require('./utils/Signals').new();
 
@@ -437,7 +436,6 @@ function endAll (event) {
 }
 
 const docEvents = { /* 'eventType': listenerFunc */ };
-const pEventTypes = browser.pEventTypes;
 
 docEvents.mousedown   = listeners.pointerDown;
 docEvents.mousemove   = listeners.pointerMove;
