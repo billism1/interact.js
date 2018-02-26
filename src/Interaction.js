@@ -439,22 +439,14 @@ function endAll (event) {
 const docEvents = { /* 'eventType': listenerFunc */ };
 const pEventTypes = browser.pEventTypes;
 
-if (domObjects.PointerEvent) {
-  docEvents[pEventTypes.down  ] = listeners.pointerDown;
-  docEvents[pEventTypes.move  ] = listeners.pointerMove;
-  docEvents[pEventTypes.up    ] = listeners.pointerUp;
-  docEvents[pEventTypes.cancel] = listeners.pointerUp;
-}
-else {
-  docEvents.mousedown   = listeners.pointerDown;
-  docEvents.mousemove   = listeners.pointerMove;
-  docEvents.mouseup     = listeners.pointerUp;
+docEvents.mousedown   = listeners.pointerDown;
+docEvents.mousemove   = listeners.pointerMove;
+docEvents.mouseup     = listeners.pointerUp;
 
-  docEvents.touchstart  = listeners.pointerDown;
-  docEvents.touchmove   = listeners.pointerMove;
-  docEvents.touchend    = listeners.pointerUp;
-  docEvents.touchcancel = listeners.pointerUp;
-}
+docEvents.touchstart  = listeners.pointerDown;
+docEvents.touchmove   = listeners.pointerMove;
+docEvents.touchend    = listeners.pointerUp;
+docEvents.touchcancel = listeners.pointerUp;
 
 docEvents.blur = endAll;
 
